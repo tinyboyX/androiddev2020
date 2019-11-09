@@ -1,43 +1,49 @@
 package vn.edu.usthweather;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
-import android.widget.TextView;
 
 public class WeatherActivity extends AppCompatActivity {
+    private static final String TAG = "Weather Activity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        Log.i(TAG,"This is onCreate function");
     }
+
+
     @Override
-    protected void onStart() {
+    protected void onStart(){
         super.onStart();
-        Log.i("Question","Are you ok ?");
+        Log.i(TAG, "This is onStart function");
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
+        Log.i(TAG, "This is oneResume function");
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause(){
         super.onPause();
+        Log.i(TAG, "This is onPause function");
     }
 
     @Override
-    protected void onStop() {
+    protected void onStop(){
         super.onStop();
+        Log.i(TAG, "This is onStop function");
     }
 
     @Override
-    protected void onDestroy() {
+    protected  void onDestroy(){
         super.onDestroy();
+        Log.i(TAG, "This is onDestroy function");
     }
-}
 
+}
