@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">USTHWeather</string>
+    <string name="weather_icon">Cloud</string>
 </resources>
