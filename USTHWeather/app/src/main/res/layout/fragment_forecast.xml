@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForecastFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".ForecastFragment"
+    android:orientation="vertical"
+    android:background="@color/light_blue">
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/monday"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30dp" />
         <ImageView
-            android:id="@+id/imageView"
+            android:layout_weight="1"
+            android:id="@+id/imageView0"
+            android:layout_width = "40dp"
+            android:layout_height= "40dp"
+            android:src="@drawable/icon_finder1_cloud_flake"
+            />
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_weight="5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/iconfinder1_cloud_flake"
-            />
-
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/weather_icon"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        />
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView_weather_info"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_info"
+                android:textSize="15dp"/>
+            <TextView
+                android:id="@+id/textView_"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/temperature"
+                android:textSize="15dp"/>
+        </LinearLayout>
     </LinearLayout>
-</FrameLayout>
+</LinearLayout>

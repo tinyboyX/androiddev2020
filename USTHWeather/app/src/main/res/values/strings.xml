@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">USTHWeather</string>
-    <string name="weather_icon">Cloud</string>
+    <string name="weather_icon">Thrusday</string>
+    <string name="weather_info">Info</string>
+    <string name="monday">Monday</string>
+    <string name="temperature">Temperature</string>
 </resources>
