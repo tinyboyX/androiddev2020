@@ -1,7 +1,5 @@
 package vn.edu.usthweather;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.util.AttributeSet;
@@ -16,10 +14,12 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         Log.i(TAG,"This is onCreate function");
-        // Create a new Fragment to be placed in the activity
-        ForecastFragment firstFragment = new ForecastFragment();
-        // Add the fragment to the 'container' FrameLayout
-        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
+//        // Create a new Fragment to be placed in the activity
+//        ForecastFragment firstFragment = new ForecastFragment();
+//        // Add the fragment to the 'container' FrameLayout
+//        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
+        WeatherFragment secondFragment = new WeatherFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.secondfragment,secondFragment).commit();
     }
 
     @Override

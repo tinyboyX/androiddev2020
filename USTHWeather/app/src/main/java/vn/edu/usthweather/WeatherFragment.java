@@ -12,19 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ForecastFragment extends Fragment {
-    public ForecastFragment() {
-    }
-//    @Nullable
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View v = new View(getContext());
-//        v.setBackgroundColor(123);
-//        return v;
-//    }
+public class WeatherFragment extends Fragment {
+    public WeatherFragment() { }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_forecast, container, false);
+        return inflater.inflate(R.layout.fragment_weather, container, false);
     }
 }
