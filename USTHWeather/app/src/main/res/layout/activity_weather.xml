@@ -2,36 +2,29 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frame_layout"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WeatherActivity">
 
-    <TextView
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello mah friend"/>
-
     <LinearLayout
+        android:id="@+id/weatherForecastLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <fragment
-            android:id="@+id/secondfragment"
-            android:name="vn.edu.usthweather.ForecastFragment"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/weatherForecastViewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_height="match_parent">
 
-        <fragment
-            android:id="@+id/firstfragment"
-            android:name="vn.edu.usthweather.ForecastFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.viewpager.widget.ViewPager>
+
     </LinearLayout>
-
 </FrameLayout>

@@ -1,53 +1,60 @@
 package vn.edu.usthweather;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.View;
+
+import com.google.android.material.tabs.TabLayout;
+
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
+    private Adapter adapter;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        Log.i(TAG,"This is onCreate function");
+        Log.i(TAG, "This is onCreate function");
+        viewPager = findViewById(R.id.weatherForecastViewPager);
+        adapter = new Adapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
 //        // Create a new Fragment to be placed in the activity
 //        ForecastFragment firstFragment = new ForecastFragment();
 //        // Add the fragment to the 'container' FrameLayout
 //        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
-//        WeatherFragment secondFragment = new WeatherFragment();
-//        getSupportFragmentManager().beginTransaction().add(R.id.secondfragment,secondFragment).commit();
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
         Log.i(TAG, "This is onStart function");
     }
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         Log.i(TAG, "This is oneResume function");
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         Log.i(TAG, "This is onPause function");
     }
 
     @Override
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
         Log.i(TAG, "This is onStop function");
     }
 
     @Override
-    protected  void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "This is onDestroy function");
     }
