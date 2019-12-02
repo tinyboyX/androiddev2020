@@ -6,9 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TableLayout;
-
-import com.google.android.material.tabs.TabLayout;
 
 
 public class WeatherActivity extends AppCompatActivity {
@@ -26,7 +23,8 @@ public class WeatherActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.weatherForecastViewPager);
         adapter = new Adapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-
+        MediaPlayer mediaPlayer= MediaPlayer.create(this,R.raw.song);
+        mediaPlayer.start();
 //        // Create a new Fragment to be placed in the activity
 //        ForecastFragment firstFragment = new ForecastFragment();
 //        // Add the fragment to the 'container' FrameLayout
@@ -36,6 +34,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
         Log.i(TAG, "This is onStart function");
     }
 
