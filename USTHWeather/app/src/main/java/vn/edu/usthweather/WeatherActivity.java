@@ -3,6 +3,7 @@ package vn.edu.usthweather;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TableLayout;
@@ -14,7 +15,6 @@ public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
     private Adapter adapter;
     private ViewPager viewPager;
-    private TableLayout tableLayout;
     public WeatherActivity() {
     }
 
@@ -26,7 +26,7 @@ public class WeatherActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.weatherForecastViewPager);
         adapter = new Adapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-        tableLayout.setId(R.id.tabMode);
+
 //        // Create a new Fragment to be placed in the activity
 //        ForecastFragment firstFragment = new ForecastFragment();
 //        // Add the fragment to the 'container' FrameLayout
