@@ -11,4 +11,7 @@
     <string name="sunday">Sunday</string>
     <string name="temperature">Temperature</string>
     <string name="place">Location</string>
+    <string name="refresh_message">Refresed</string>
+    <string name="refresh">Refresh</string>
+    <string name="setting_icon">Setting</string>
 </resources>
